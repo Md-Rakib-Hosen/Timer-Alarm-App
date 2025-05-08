@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  /* Clock Section */
+  .clock-section, .stopwatch-section, .alarm-section {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  
+  /* Clock Styling */
+  .clock {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border: 8px solid #94a3b8;
+    border-radius: 50%;
+    margin: auto;
+    background: #334155;
+  }
+  
+  .clock .dot {
+    width: 12px;
+    height: 12px;
+    background: #facc15;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  
+  .hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: rotate(90deg);
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .hand.hour {
+    width: 6px;
+    height: 60px;
+    background: #facc15;
+  }
+  
+  .hand.minute {
+    width: 4px;
+    height: 85px;
+    background: #3b82f6;
+  }
+  
+  .hand.second {
+    width: 2px;
+    height: 100px;
+    background: #ef4444;
+  }
+  
+  /* Clock Numbers */
+  .numbers span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: rotate(calc(var(--n)*30deg)) translate(110px) rotate(calc(var(--n)*-30deg));
+    transform-origin: center;
+    font-size: 1rem;
+    color: #e2e8f0;
+  }
+  
+  /* Stopwatch */
+  .display {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  
+  .controls button, .alarm-section button {
+    margin: 6px;
+    padding: 8px 14px;
+    font-size: 14px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .controls button:hover {
+    background: #2563eb;
+  }
+  
+  input[type="time"] {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    background: #f8fafc;
+    color: #1e293b;
+  }
+  

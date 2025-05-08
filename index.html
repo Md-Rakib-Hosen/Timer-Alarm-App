@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Time App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Analog Clock -->
+    <section class="clock-section">
+      <h2>Analog Clock</h2>
+      <div class="clock">
+        <div class="numbers">
+          <span style="--n:1">4</span>
+          <span style="--n:2">5</span>
+          <span style="--n:3">6</span>
+          <span style="--n:4">7</span>
+          <span style="--n:5">8</span>
+          <span style="--n:6">9</span>
+          <span style="--n:7">10</span>
+          <span style="--n:8">11</span>
+          <span style="--n:9">12</span>
+          <span style="--n:10">1</span>
+          <span style="--n:11">2</span>
+          <span style="--n:12">3</span>
+        </div>
+        <div class="hand hour" id="hourHand"></div>
+        <div class="hand minute" id="minuteHand"></div>
+        <div class="hand second" id="secondHand"></div>
+        <div class="dot"></div>
+      </div>
+    </section>
+
+    <!-- Stopwatch -->
+    <section class="stopwatch-section">
+      <h2>Stopwatch</h2>
+      <div class="display" id="stopwatch">00:00:00</div>
+      <div class="controls">
+        <button onclick="startStopwatch()">Start</button>
+        <button onclick="stopStopwatch()">Stop</button>
+        <button onclick="resetStopwatch()">Reset</button>
+      </div>
+    </section>
+
+    <!-- Alarm -->
+    <section class="alarm-section">
+      <h2>Alarm</h2>
+      <input type="time" id="alarmTime">
+      <button onclick="setAlarm()">Set Alarm</button>
+      <p id="alarmStatus">No alarm set</p>
+    </section>
+
+    <audio id="beep" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
